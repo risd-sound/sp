@@ -1,0 +1,22 @@
+#N canvas 36 41 695 469 10;
+#X obj 176 261 s bela_setDigital;
+#X obj 71 37 loadbang;
+#X obj 52 190 metro 500;
+#X obj 71 97 t b b;
+#X msg 52 145 1;
+#X text 68 4 IDE URL http://192.168.7.2;
+#X obj 51 350 s bela_digitalOut11;
+#X obj 52 269 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 176 192 out 11 message;
+#X text 135 37 use loadbang to initiate a process at startup;
+#X text 114 97 use trigger to order events from right to left;
+#X text 183 351 send command to pin 0;
+#X text 278 191 set digital pin 0 as outout at control rate;
+#X connect 1 0 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 3 1 8 0;
+#X connect 4 0 2 0;
+#X connect 7 0 6 0;
+#X connect 8 0 0 0;

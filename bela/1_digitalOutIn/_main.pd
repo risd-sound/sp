@@ -1,0 +1,26 @@
+#N canvas 169 338 695 469 10;
+#X obj 65 176 s bela_setDigital;
+#X obj 65 54 loadbang;
+#X text 68 4 IDE URL http://192.168.7.2;
+#X obj 65 350 s bela_digitalOut11;
+#X obj 65 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 164 54 use loadbang to initiate a process at startup;
+#X text 210 351 send command to pin 0;
+#X obj 65 227 r bela_digitalIn12;
+#X text 201 105 set digital pin 0 as outout and pin 1 as input at control
+rate;
+#X text 209 228 receive pin 1 state;
+#X msg 65 106 out 11 \, in 12;
+#X obj 65 294 sel 1;
+#X msg 65 319 0;
+#X msg 96 319 1;
+#X text 154 318 need to flip state for pull-up resistor;
+#X connect 1 0 10 0;
+#X connect 4 0 11 0;
+#X connect 7 0 4 0;
+#X connect 10 0 0 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;

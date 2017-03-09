@@ -1,0 +1,21 @@
+#N canvas 130 41 567 572 10;
+#X text 68 4 IDE URL http://192.168.7.2;
+#X obj 66 197 dac~ 3;
+#X obj 63 296 *~ 0.5;
+#X obj 63 332 +~ 0.5;
+#X text 194 61 analog inputs and outputs have a range of 0 to 1 \;
+signals must conform to this range \; phasor~ generates a ramp from
+0 to 1;
+#X text 190 259 analog inputs and outputs have a range of 0 to 1 \;
+signals must conform to this range \; osc~ is a sine wave going from
+-1 to 1 so some \; math on the signal is required to scale from 0 to
+1 \;;
+#X obj 63 391 dac~ 4;
+#X text 142 197 output to analog out pin 0;
+#X text 145 390 output to analog out pin 1;
+#X obj 63 254 osc~ 0.25;
+#X obj 67 57 phasor~ 0.5;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 9 0 2 0;
+#X connect 10 0 1 0;
